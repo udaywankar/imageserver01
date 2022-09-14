@@ -28,8 +28,8 @@ const storage = multer.diskStorage({
         console.log(prodid);
         let prodId=12;
         let imageNo=1;
-        //return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-        return cb(null, `image_${prodId}_${imageNo}${path.extname(file.originalname)}`)
+        return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
+       // return cb(null, `image_${prodId}_${imageNo}${path.extname(file.originalname)}`)
     }
 })
 
