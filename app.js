@@ -20,29 +20,7 @@ app.use(function(req, res, next) {
 const storage = multer.diskStorage({
     destination: './upload/images',
     filename: (req, file, cb) => {
-<<<<<<< HEAD
-        // console.log("11111111111111111111");
-        // console.log(req.body);
-        // console.log(req.body.prodid);
-        // console.log(global.myNumber);
-        // const { prodid } = req.body
-        // console.log(prodid);
-        // let prodId=12;
-        // let imageNo=1;
         return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-       // return cb(null, `image_${prodId}_${imageNo}${path.extname(file.originalname)}`)
-=======
-        console.log("11111111111111111111");
-        console.log(req.body);
-        console.log(req.body.prodid);
-        console.log(global.myNumber);
-        const { prodid } = req.body
-        console.log(prodid);
-        let prodId=12;
-        let imageNo=1;
-      return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-     //  return cb(null, `image_${prodId}_${imageNo}${path.extname(file.originalname)}`)
->>>>>>> bedf94770fbe1aa8539e186c6528146fda949cad
     }
 })
 
